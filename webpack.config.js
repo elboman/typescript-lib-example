@@ -52,7 +52,7 @@ var config = {
     externals: {
         // tell Webpack to be compatible with the following format for requiring moment
         'moment': {root: 'moment', commonjs: 'moment', commonjs2: 'moment', amd: 'moment'}
-    },
+    }
 };
 
 module.exports = config;
