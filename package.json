@@ -7,8 +7,8 @@
   "author": "Marco Botto",
   "license": "MIT",
   "scripts": {
-    "clean": "shx rm -rf _bundles lib lib-esm",
-    "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack"
+    "clean": "shx rm -rf dist-umd dist-commonjs disy-esmodule",
+    "build": "npm run clean && tsc && tsc -m es6 --outDir dist-esmodule && webpack"
   },
   "dependencies": {
     "moment": "^2.18.1"
