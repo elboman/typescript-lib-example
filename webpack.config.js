@@ -47,7 +47,7 @@ var config = {
         ]
     },
 
-    // this library should not include external dependencies, so our library uses
+    // this library should not include external dependencies, so our library users
     // can choose their own version (or omit it completely if it is optional)
     externals: {
         // tell Webpack to be compatible with the following format for requiring moment
