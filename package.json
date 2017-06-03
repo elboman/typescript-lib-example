@@ -3,8 +3,20 @@
   "version": "1.1.0",
   "description": "Example of TypeScript library setup for multiple compilation targets using tsc and webpack",
   "main": "dist-commonjs/index.js",
-  "repository": "https://www.github.com/elboman/typescript-lib-example",
-  "author": "Marco Botto",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/elboman/typescript-lib-example.git"
+  },
+  "author": {
+    "name": "Marco Botto",
+    "email": "b.bottema@projectnibble.org",
+    "url": "http://marcobotto.com"
+  },
+  "contributors": [{
+      "name": "Benny Bottema",
+      "email": "benny@bennybottema.com",
+      "url": "http://www.bennybottema.com"
+    }],
   "license": "MIT",
   "scripts": {
     "clean": "shx rm -rf dist-umd dist-commonjs disy-esmodule",
