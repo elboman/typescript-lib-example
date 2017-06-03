@@ -40,7 +40,6 @@ var config = {
         })
     ],
 
-
     // Webpack doesn't understand TypeScript files and a loader is needed.
     module: {
         rules: [
@@ -51,7 +50,14 @@ var config = {
                 ]
             }
         ]
-    }
+    },
+
+    // this library should not include external dependencies, so our library uses
+    // can choose their own version (or omit it completely if it is optional)
+    externals: {
+        // tell Webpack to be compatible with the following format for requiring moment
+        'moment': {root: 'moment', commonjs: 'moment', commonjs2: 'moment', amd: 'moment'}
+    },
 };
 
 module.exports = config;

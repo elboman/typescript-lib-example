@@ -10,6 +10,9 @@
     "clean": "shx rm -rf _bundles lib lib-esm",
     "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack"
   },
+  "dependencies": {
+    "moment": "^2.18.1"
+  },
   "devDependencies": {
     "awesome-typescript-loader": "^3.0.4-rc.2",
     "shx": "^0.2.2",
