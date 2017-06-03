@@ -1,6 +1,6 @@
 {
   "name": "typescript-lib-example",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Example of TypeScript library setup for multiple compilation targets using tsc and webpack",
   "main": "dist-commonjs/index.js",
   "repository": "https://www.github.com/elboman/typescript-lib-example",
