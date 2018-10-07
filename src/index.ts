@@ -1,5 +1,3 @@
-import {Greeter} from './Greeter';
+import {getSimpleGlyphName} from './convert';
 
-const example = new Greeter('World');
-
-console.log(example.greet());
+console.log(getSimpleGlyphName('Ἦ')); // 'ETA'
