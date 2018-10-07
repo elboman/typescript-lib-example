@@ -6,11 +6,19 @@
     "lib": [ "es2015", "dom" ],
     "outDir": "lib",
     "allowSyntheticDefaultImports": true,
-    "suppressImplicitAnyIndexErrors": true,
+    //"suppressImplicitAnyIndexErrors": true,
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
     "declaration": true,
-    "jsx": "react"
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "alwaysStrict": true,
+    "allowJs": false,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
   },
   "files": [
     "./src/index.ts"
