@@ -1,0 +1,12 @@
+BasedOnStyle: Google
+AlignAfterOpenBracket: AlwaysBreak
+AllowAllParametersOfDeclarationOnNextLine: false
+AllowShortBlocksOnASingleLine: false
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+BinPackArguments: false
+BinPackParameters: false
+MaxEmptyLinesToKeep: 1
+ColumnLimit: 325
