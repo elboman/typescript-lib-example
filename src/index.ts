@@ -1,3 +1,3 @@
-import {getSimpleGlyphName} from './convert';
+import {isVowel} from './convert';
 
-console.log(getSimpleGlyphName('Ἦ')); // 'ETA'
+console.log(isVowel('θ')); // 'ETA'

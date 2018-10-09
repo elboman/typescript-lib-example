@@ -6,9 +6,12 @@ export const glyphToName = (glyph: string): string => {
     return unicodeToName[decimalToHex(glyph.charCodeAt(0), 4)];
 };
 
-export const isVowel = (glyph: string): boolean => {
-    const glyphName = glyphToName(glyph);
-    return glyphName.indexOf(' ALPHA') > -1 || glyphName.indexOf(' EPSILON') > -1 || glyphName.indexOf(' OMICRON') > -1 || glyphName.indexOf(' OMEGA') > -1 || glyphName.indexOf(' UPSILON') > -1 || glyphName.indexOf(' ETA') > -1 || glyphName.indexOf(' IOTA') > -1;
+export const isVowel = (glyphs: string): boolean => {
+    const regex = /[\u0391\u0395\u0397\u0399\u039F\u03A5\u03A9]/g;
+    const normalizedFirstGlyph = glyphs.toUpperCase().normalize('NFD')[0];
+    return regex.test(normalizedFirstGlyph);
+    // const glyphName = glyphToName(glyph);
+    // return glyphName.indexOf(' ALPHA') > -1 || glyphName.indexOf(' EPSILON') > -1 || glyphName.indexOf(' OMICRON') > -1 || glyphName.indexOf(' OMEGA') > -1 || glyphName.indexOf(' UPSILON') > -1 || glyphName.indexOf(' ETA') > -1 || glyphName.indexOf(' IOTA') > -1;
 };
 
 export const getSimpleGlyphName = (glyph: string, withIotaSubscript: boolean = false): string => {
