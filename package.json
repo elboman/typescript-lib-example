@@ -1,19 +1,34 @@
 {
   "name": "typescript-lib-example",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Example of TypeScript library setup for multiple compilation targets using tsc and webpack",
-  "main": "index.js",
-  "repository": "https://www.github.com/elboman/typescript-lib-example",
-  "author": "Marco Botto",
+  "main": "dist-commonjs/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/elboman/typescript-lib-example.git"
+  },
+  "author": {
+    "name": "Marco Botto",
+    "email": "b.bottema@projectnibble.org",
+    "url": "http://marcobotto.com"
+  },
+  "contributors": [{
+      "name": "Benny Bottema",
+      "email": "benny@bennybottema.com",
+      "url": "http://www.bennybottema.com"
+    }],
   "license": "MIT",
   "scripts": {
-    "clean": "shx rm -rf _bundles lib lib-esm",
-    "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack"
+    "clean": "shx rm -rf dist-umd dist-commonjs dist-esmodule",
+    "build": "npm run clean && tsc && tsc -m es6 --outDir dist-esmodule && webpack"
   },
   "dependencies": {
+    "moment": "^2.18.1"
+  },
+  "devDependencies": {
     "awesome-typescript-loader": "^3.0.4-rc.2",
     "shx": "^0.2.2",
-    "typescript": "^2.1.6",
-    "webpack": "^2.2.1"
+    "typescript": "2.3.1",
+    "webpack": "2.4.1"
   }
 }

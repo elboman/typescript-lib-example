@@ -1,0 +1,1 @@
+Read about this setup at: [Compiling and bundling TypeScript libraries with Webpack](http://marcobotto.com/compiling-and-bundling-typescript-libraries-with-webpack/).
