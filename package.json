@@ -19,7 +19,7 @@
     }],
   "license": "MIT",
   "scripts": {
-    "clean": "shx rm -rf dist-umd dist-commonjs disy-esmodule",
+    "clean": "shx rm -rf dist-umd dist-commonjs dist-esmodule",
     "build": "npm run clean && tsc && tsc -m es6 --outDir dist-esmodule && webpack"
   },
   "dependencies": {
