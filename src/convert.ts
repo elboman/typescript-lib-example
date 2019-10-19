@@ -14,6 +14,12 @@ export const isVowel = (glyphs: string): boolean => {
     // return glyphName.indexOf(' ALPHA') > -1 || glyphName.indexOf(' EPSILON') > -1 || glyphName.indexOf(' OMICRON') > -1 || glyphName.indexOf(' OMEGA') > -1 || glyphName.indexOf(' UPSILON') > -1 || glyphName.indexOf(' ETA') > -1 || glyphName.indexOf(' IOTA') > -1;
 };
 
+export const isEqualWithoutDiacritics = (a: string, b:string): boolean => {
+    console.log(decimalToHex(a.toUpperCase().normalize('NFD').codePointAt(1), 0) , decimalToHex(b.toUpperCase().normalize('NFD').codePointAt(1), 0));
+    return a.toUpperCase().normalize('NFD') === b.toUpperCase().normalize('NFD');
+};
+
+
 export const getSimpleGlyphName = (glyph: string, withIotaSubscript: boolean = false): string => {
     const glyphName = glyphToName(glyph);
     const simpleGlyphNames = / ALPHA| BETA| GAMMA| DELTA| EPSILON| ZETA| ETA| THETA| IOTA| KAPPA| LAMBDA| MU| NU| XI| OMICRON| PI| RHO| SIGMA| TAU| UPSILON| PHI| CHI| PSI| OMEGA/;
