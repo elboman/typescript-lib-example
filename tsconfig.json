@@ -21,7 +21,8 @@
     "strictNullChecks": true,
   },
   "files": [
-    "./src/index.ts"
+    "./src/index.ts",
+    "./test/convert-test.ts"
   ],
   "compileOnSave": false,
   "buildOnSave": false

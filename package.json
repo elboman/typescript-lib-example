@@ -8,19 +8,21 @@
   "license": "MIT",
   "scripts": {
     "clean": "shx rm -rf _bundles lib lib-esm",
-    "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack"
+    "build": "npm run clean && tsc && tsc -m es6 --outDir lib-esm && webpack",
+    "test": "mocha -r ts-node/register test/**/*.ts"
   },
   "dependencies": {},
   "devDependencies": {
-    "awesome-typescript-loader": "^3.0.4-rc.2",
-    "clang-format": "^1.2.4",
-    "tslint": "5.11.0",
-    "typescript": "3.0.1",
     "@types/chai": "^4.1.4",
     "@types/mocha": "^5.2.5",
+    "awesome-typescript-loader": "^3.0.4-rc.2",
     "chai": "^4.1.2",
-    "webpack": "^2.2.1",
+    "clang-format": "^1.2.4",
+    "mocha": "^5.2.0",
     "shx": "^0.2.2",
-    "mocha": "^5.2.0"
+    "ts-node": "^7.0.1",
+    "tslint": "5.11.0",
+    "typescript": "3.0.1",
+    "webpack": "^2.2.1"
   }
 }
